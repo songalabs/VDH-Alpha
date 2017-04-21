@@ -1,4 +1,4 @@
-#Reset point VDHv0.1.0
+# Reset point VDHv0.1.0
 
 ## Features met
 
