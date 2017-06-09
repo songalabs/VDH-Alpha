@@ -1,0 +1,45 @@
+{% extends "vdh/base.html" %}
+{% block content%}
+			<div class="container">
+				<div class="row">
+						<div class="col-md-8 col-md-offset-4">
+					<div class="section-heading">
+					</br>
+						<h2>Create your account</h2>
+					</div>
+				
+							<h3> Help </h3>
+							<p>Use your KVB reg number prefixed with "kvb" as your username. For example <strong>"kvb0848237"</strong></p>
+							<form action="" method="POST">
+							{% csrf_token %}
+							{% for field in form %}
+								<div class="form-group">
+									<div class="row">
+										<div class="col-md-3">
+											{{field.errors}}
+											{{field.label_tag}}{{field}}
+										</div>
+									</div>
+								</div>
+							{% endfor %}
+
+
+								<div class="form-group">
+									<div class="row">
+										<div class="col-md-3">
+											<input type="submit" class="btn btn-primary btn-outline btn-lg btn-block" value="Submit">
+											</br>
+											</hr>
+											</br>
+											</br>
+										</div>
+									</div>
+								</div>
+
+							</form>
+						</div>
+					
+				</div>
+			</div>
+
+{% endblock %}

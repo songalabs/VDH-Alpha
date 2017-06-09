@@ -1,0 +1,36 @@
+{% extends "vdh/base.html" %}
+{% block content%}
+			<div class="container">
+				<div class="row">
+					<div class="section-heading">
+						<h2>Create a new account</h2>
+					</div>
+						<div class="col-md-12">
+							<form action="" method="POST">
+							{% csrf_token %}
+							{% for field in reg_form %}
+								<div class="form-group">
+									<div class="row">
+										<div class="col-md-3">
+											{{field.errors}}
+											{{field.label_tag}}{{field}}
+										</div>
+									</div>
+								</div>
+							{% endfor %}
+
+
+								<div class="form-group">
+									<div class="row">
+										<div class="col-md-3">
+											<input type="submit" class="btn btn-primary btn-outline btn-lg btn-block" value="Submit">
+										</div>
+									</div>
+								</div>
+
+							</form>
+						</div>
+				</div>
+			</div>
+
+{% endblock %}

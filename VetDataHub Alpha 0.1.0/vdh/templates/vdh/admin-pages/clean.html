@@ -1,0 +1,30 @@
+{% extends "vdh/admin-pages/base.html" %}
+
+    <div id="wrapper">
+
+        {% include "vdh/includes/admin-nav.html" %}
+
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        {% block content %}
+			{% endblock %}
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    {% include "vdh/includes/admin-scripts.html" %}
+
+</body>
+
+</html>

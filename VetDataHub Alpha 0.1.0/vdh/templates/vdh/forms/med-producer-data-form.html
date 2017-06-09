@@ -1,0 +1,28 @@
+{% extends "vdh/form-base.html" %}
+{% block content%}
+
+				<div class="col-md-8">
+						<h1> Enter medicine production data </h1>
+							</br>
+							<form action="" method="POST">
+							{% csrf_token %}
+							{% for field in med_prod_data_form %}
+								<div class="form-group">
+											{{field.errors}}
+											{{field.label_tag}}{{field}}
+
+								</div>
+								<p></p>
+							{% endfor %}
+								<div class="clearfix"></div>
+
+								<div class="form-group">
+											<input type="submit" class="btn btn-primary btn-outline btn-lg btn-block" value="Submit">
+								</div>
+
+							</form>
+				</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		
+		{% include "vdh/includes/admin-head.html" %}
+
+
+	</head>
+	<body>
+	<div id="wrapper">
+		{% include "vdh/includes/admin-nav.html" %}
+		<div id="page-wrapper">
+		{%  block content  %}
+		{% endblock %}
+		</br>
+		</br>
+
+	{% include "vdh/includes/footer.html" %}
+	</div>
+	</div>
+	{% include "vdh/includes/admin-scripts.html" %}
+
+	</body>
+</html>
